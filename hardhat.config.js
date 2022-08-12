@@ -17,13 +17,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const INFURA_API_KEY = "6b060aee93c34c06980fa8e3b612c755";
+const INFURA_API_KEY = "50352ec4dbf64f5196c3f4d60d20710b";
 const RINKEBY_ACCOUNT_PK =
-  "0f48011361e5e719fd5dbde7763195b36e82526fb9bf62705344952fa25b3571";
+  "b2bc4b09d0628de841aa548f8aa3d67ecdccd03406fa1192f18b7bbb304029b4";
 const RINKEBY_ACCOUNT_A2 =
-  "e2762c4547761e7a09c8c82e485355ef86ab286e68ea5a08362bebd0862a7f6d";
+  "591480bff6c34168105ce09f4ae26f5ec69f3673b93bc56e7b7fbea3dba04c79";
 const RINKEBY_ACCOUNT_A3 =
-  "22329897a437e76ad7df5112dbc4cb4ccd85255eae09f67753663f60b0ac1907";
+  "73899643734bd5cb8cdbddce2b0d1e17163e7b69d76c1e93386ddbc7315dc4be";
 
 module.exports = {
   solidity: "0.8.9",
