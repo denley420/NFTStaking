@@ -5,16 +5,10 @@ pragma solidity ^0.8.7;
 /*
 NFT Staking
 - Create your own NFT with a max supply of 100
-
 - Set lock in period
 - Specify an NFT (address) to be allowed for staking. 1 address only
-
-# ON STAKE
 - Stake method should transfer the NFT from user's wallet to stake contract
-    
-# ON UNSTAKE
 - User should earn .001 eth every block while NFT is staked
-
 - User should only be allowed to unstake the NFT after the lock-in period
 - ETH rewards accumulation should stop after the user unstaked the NFT
 - User should be able to claim the rewards only after unstaking the NFT
