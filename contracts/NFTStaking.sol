@@ -21,6 +21,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NFT_Token is Ownable, ERC721 {
+    // NFT max supply of 100 
     uint public tokenId = 0;
     uint public currentSupply = 0;
     uint public maxSupply = 100;
