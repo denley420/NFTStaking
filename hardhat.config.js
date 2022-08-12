@@ -26,7 +26,7 @@ const RINKEBY_ACCOUNT_A3 =
   "22329897a437e76ad7df5112dbc4cb4ccd85255eae09f67753663f60b0ac1907";
 
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.9",
   networks: {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
