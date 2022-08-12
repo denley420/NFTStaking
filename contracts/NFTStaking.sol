@@ -7,7 +7,11 @@ NFT Staking
 - Create your own NFT with a max supply of 100
 - Set lock in period
 - Specify an NFT (address) to be allowed for staking. 1 address only
+<<<<<<< HEAD
 - Stake method should transfer the NFT from user's wallet to stake contract 
+=======
+- Stake method should transfer the NFT from user's wallet to stake contract
+>>>>>>> 93949e08030696c17f1618f2eb0ad839bb5a3168
 - User should earn .001 eth every block while NFT is staked
 - User should only be allowed to unstake the NFT after the lock-in period
 - ETH rewards accumulation should stop after the user unstaked the NFT
@@ -22,7 +26,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NFT_Token is Ownable, ERC721 {
     // NFT max supply of 100 
+<<<<<<< HEAD
     uint public maxSupply = 100;
+=======
+>>>>>>> 93949e08030696c17f1618f2eb0ad839bb5a3168
     uint public tokenId = 0;
     uint public currentSupply = 0;
 
