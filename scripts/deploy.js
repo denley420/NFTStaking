@@ -1,6 +1,6 @@
-async function deploy_XToken(){
+async function deploy_NFTStaking(){
 
-  console.log("Deploying XToken...");
+  console.log("Deploying NFTStaking...");
   console.log("------------------------------------------------------");
   const [deployer] = await ethers.getSigners();
 
@@ -8,19 +8,19 @@ async function deploy_XToken(){
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const XToken = await ethers.getContractFactory("XToken");
-  const contract = await XToken.deploy();
+  const NFTStaking = await ethers.getContractFactory("NFTStaking");
+  const contract = await NFTStaking.deploy();
   await contract.deployed();
 
-  console.log("[XToken] address:", contract.address);
+  console.log("[NFTStaking] address:", contract.address);
 
   return contract.address;
 
 }
 
-async function deploy_XTokenRaffle(token_address){
+async function deploy_NFTStaking(token_address){
 
-  console.log("Deploying XTokenRaffle...");
+  console.log("Deploying NFTStaking...");
   console.log("------------------------------------------------------");
   const [deployer] = await ethers.getSigners();
 
@@ -28,11 +28,11 @@ async function deploy_XTokenRaffle(token_address){
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const XTokenRaffle = await ethers.getContractFactory("XTokenRaffle");
-  const contract = await XTokenRaffle.deploy(token_address);
+  const NFTStaking = await ethers.getContractFactory("NFTStaking");
+  const contract = await NFTStaking.deploy(token_address);
   await contract.deployed();
 
-  console.log("[XTokenRaffle] address:", contract.address);
+  console.log("[NFTStaking] address:", contract.address);
 
   return contract.address;
 
@@ -43,9 +43,9 @@ async function main() {
   console.log("============================================================");
   console.log("Deploying contracts...");
   console.log();
-  let xtoken_address = await deploy_XToken();
+  let NFTStaking_address = await deploy_NFTStaking();
   console.log();
-  await deploy_XTokenRaffle(xtoken_address);
+  await deploy_NFTStaking(NFTStaking_address);
   console.log();
   console.log("============================================================");
   console.log("\n");
