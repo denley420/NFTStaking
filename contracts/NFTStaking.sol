@@ -1,20 +1,14 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.7;
 
 /*
 NFT Staking
 - Create your own NFT with a max supply of 100
-
 - Set lock in period
 - Specify an NFT (address) to be allowed for staking. 1 address only
-
-# ON STAKE
-- Stake method should transfer the NFT from user's wallet to stake contract
-    
-# ON UNSTAKE
+- Stake method should transfer the NFT from user's wallet to stake contract 
 - User should earn .001 eth every block while NFT is staked
-
 - User should only be allowed to unstake the NFT after the lock-in period
 - ETH rewards accumulation should stop after the user unstaked the NFT
 - User should be able to claim the rewards only after unstaking the NFT
@@ -27,9 +21,10 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NFT_Token is Ownable, ERC721 {
+    // NFT max supply of 100 
+    uint public maxSupply = 100;
     uint public tokenId = 0;
     uint public currentSupply = 0;
-    uint public maxSupply = 100;
 
     constructor() ERC721("NFT_Token", "NFTT") {}
     
@@ -42,7 +37,6 @@ contract NFT_Token is Ownable, ERC721 {
 }
 
 contract NFTStaking is IERC721Receiver, Ownable {
-
     uint public startTime;
     uint public endTime;
 
